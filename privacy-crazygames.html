@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – Minigolf (CrazyGames)</title>
+<style>
+  :root {
+    --green: #00ff88;
+    --green-dim: #00aa55;
+    --green-dark: #005533;
+    --green-muted: #003322;
+    --gold: #ffcc00;
+    --bg: #0a0a0f;
+    --surface: #0d120e;
+    --text: #c8e8d8;
+    --text-dim: #557766;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.75;
+    padding: 0 20px 80px;
+  }
+
+  /* scanline texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,255,136,0.015) 2px,
+      rgba(0,255,136,0.015) 4px
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 56px 0 40px;
+    border-bottom: 1px solid var(--green-muted);
+    margin-bottom: 48px;
+  }
+
+  .game-badge {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--green-dark);
+    background: var(--green-muted);
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: clamp(28px, 6vw, 44px);
+    font-weight: 900;
+    color: var(--green);
+    text-shadow: 0 0 24px rgba(0,255,136,0.4), 0 0 60px rgba(0,255,136,0.15);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .meta {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    margin-bottom: 44px;
+  }
+
+  h2 {
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--green);
+    text-shadow: 0 0 12px rgba(0,255,136,0.3);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--green-muted);
+  }
+
+  p {
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0 0 12px 0;
+    padding: 0;
+  }
+
+  ul li {
+    font-size: 13px;
+    color: var(--text);
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+
+  ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--green-dark);
+  }
+
+  /* ── TABLE ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 16px 0;
+    border: 1px solid var(--green-muted);
+    border-radius: 4px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+
+  thead tr {
+    background: var(--green-muted);
+  }
+
+  th {
+    padding: 10px 14px;
+    text-align: left;
+    letter-spacing: 3px;
+    color: var(--green-dim);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 10px 14px;
+    color: var(--text);
+    border-top: 1px solid var(--green-muted);
+    vertical-align: top;
+  }
+
+  tr:hover td {
+    background: rgba(0,255,136,0.03);
+  }
+
+  /* ── NOTE ── */
+  .note {
+    background: rgba(0,255,136,0.04);
+    border-left: 2px solid var(--green-dark);
+    padding: 12px 16px;
+    border-radius: 0 4px 4px 0;
+    font-size: 12px;
+    color: var(--text-dim);
+    margin: 16px 0;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── CONTACT ── */
+  .contact-link {
+    display: inline-block;
+    color: var(--green);
+    text-decoration: none;
+    border-bottom: 1px solid var(--green-dark);
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: border-color 0.15s, text-shadow 0.15s;
+  }
+
+  .contact-link:hover {
+    border-color: var(--green);
+    text-shadow: 0 0 10px rgba(0,255,136,0.5);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--green-muted);
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 480px) {
+    body { padding: 0 14px 60px; }
+    header { padding: 36px 0 28px; }
+    h1 { letter-spacing: 3px; }
+    td, th { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="game-badge">Web Game · CrazyGames</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Minigolf &nbsp;·&nbsp; Last updated: June 25, 2026 &nbsp;·&nbsp; Sviatoslav Parashchak</p>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p>Minigolf is a free browser arcade game developed by Sviatoslav Parashchak and distributed through CrazyGames. This policy explains what data is collected when you play the CrazyGames web version, why it is collected, and how you can control it. We collect only what is necessary to provide leaderboards, ad-supported gameplay, and game improvement analytics. The game is played as a guest — no account, email, or password is required.</p>
+  </section>
+
+  <section>
+    <h2>Data We Collect</h2>
+    <p>When you play Minigolf on CrazyGames, the following data may be processed:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Purpose</th>
+            <th>Processed By</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CrazyGames user identifier (if signed in to CrazyGames)</td>
+            <td>Leaderboard ranking under your CrazyGames profile</td>
+            <td>CrazyGames</td>
+          </tr>
+          <tr>
+            <td>Level scores (strokes, time)</td>
+            <td>Leaderboard rankings</td>
+            <td>CrazyGames</td>
+          </tr>
+          <tr>
+            <td>Audio mute preference</td>
+            <td>Respect the platform-wide CrazyGames mute setting</td>
+            <td>CrazyGames SDK</td>
+          </tr>
+          <tr>
+            <td>Ad impressions and interactions</td>
+            <td>Serving and measuring video advertisements</td>
+            <td>CrazyGames Ads</td>
+          </tr>
+          <tr>
+            <td>Gameplay events (level completion, strokes, actions)</td>
+            <td>Understanding player behaviour to improve the game</td>
+            <td>Firebase Analytics</td>
+          </tr>
+          <tr>
+            <td>Local progress (unlocked levels, zoom preference)</td>
+            <td>Saving your game state on your device</td>
+            <td>Browser localStorage (on your device only)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The game does not ask for your email, name, or any personal contact information. All player identity on the leaderboard comes from your CrazyGames account, if you have one — the game itself does not see your CrazyGames credentials.</p>
+  </section>
+
+  <section>
+    <h2>How Data Is Used</h2>
+    <p>The data above is used exclusively to:</p>
+    <ul>
+      <li>Display your scores on the CrazyGames leaderboard</li>
+      <li>Serve video advertisements between levels through the CrazyGames Ad SDK</li>
+      <li>Respect platform settings such as audio mute</li>
+      <li>Analyse anonymous gameplay patterns (strokes per level, time, completion rate) to improve game balance and experience</li>
+    </ul>
+    <p>We do not sell or share your personal data with third parties beyond what is necessary to operate the services described above.</p>
+  </section>
+
+  <section>
+    <h2>Advertising</h2>
+    <p>Minigolf displays advertisements through the <strong style="color:var(--green-dim)">CrazyGames Ad SDK</strong>. Ads are served by CrazyGames and its ad partners, and may use cookies and similar technologies to measure performance and serve relevant content. Ad-related data collection on CrazyGames is governed by the <a class="contact-link" href="https://www.crazygames.com/privacy" target="_blank" rel="noopener">CrazyGames Privacy Policy</a>.</p>
+    <p>You can manage cookie and tracking preferences directly on CrazyGames through their consent banner and account settings.</p>
+  </section>
+
+  <section>
+    <h2>Third-Party Services</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Provider</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CrazyGames SDK (leaderboard, ads, settings)</td>
+            <td>CrazyGames BV</td>
+            <td>Leaderboard, advertisements, platform settings</td>
+          </tr>
+          <tr>
+            <td>Firebase Analytics</td>
+            <td>Google LLC</td>
+            <td>Anonymous gameplay analytics to improve the game</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>All data is transmitted over encrypted HTTPS connections. Each service operates under its own privacy policy and terms of service:</p>
+    <ul>
+      <li><a class="contact-link" href="https://www.crazygames.com/privacy" target="_blank" rel="noopener">CrazyGames Privacy Policy</a></li>
+      <li><a class="contact-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> (covers Firebase Analytics)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>No Account, No Personal Data</h2>
+    <p>The CrazyGames version of Minigolf does not have its own account system. You play as a guest. The game does not collect your email, name, location, or any contact information. Any player identity shown on the leaderboard comes from your CrazyGames account, which is managed entirely by CrazyGames and never shared with the game.</p>
+    <div class="note">
+      To delete your leaderboard entries or CrazyGames account, please use CrazyGames' own account settings — those records are stored on CrazyGames servers and are not accessible to the game developer.
+    </div>
+  </section>
+
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>Minigolf is suitable for all ages. The CrazyGames version does not collect personal data such as email or name from any player, including children. Ad serving on CrazyGames follows their own policies for child-directed traffic. If you have concerns about a minor's use of the game, please contact CrazyGames support or the developer at the email below.</p>
+  </section>
+
+  <section>
+    <h2>Data Retention</h2>
+    <p>Scores submitted to the CrazyGames leaderboard are retained by CrazyGames according to their own retention policy. Anonymous analytics data retained by Firebase Analytics is subject to Google's own retention settings. Local data (unlocked levels, zoom preference) is stored only in your browser and can be cleared at any time by clearing your browser's site data for CrazyGames.</p>
+  </section>
+
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>If we make material changes to this policy, we will update the "Last updated" date at the top of this page. Continued use of the game after changes constitutes acceptance of the updated policy.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions, requests, or concerns about your data:</p>
+    <a class="contact-link" href="mailto:sviatoslav.parashchak@gmail.com">sviatoslav.parashchak@gmail.com</a>
+  </section>
+
+  <footer>
+    © 2026 Sviatoslav Parashchak &nbsp;·&nbsp; Minigolf &nbsp;·&nbsp; CrazyGames Edition
+  </footer>
+
+</div>
+</body>
+</html>
